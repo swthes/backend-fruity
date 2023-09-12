@@ -49,7 +49,7 @@ app.post('/fruits', (req, res)=>{
   const nfruit = req.body
   const matching = fruits.find(fruits=> fruits.name.toLowerCase() == nfruit.name.toLowerCase())
 
-  if(!matching){
+  if(matching==undefined){
    count++
    nfruit.id = count
    fruits.push(nfruit)
