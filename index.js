@@ -11,7 +11,7 @@ const fruits = require('./fruits.json')
 //middleware - code that is exexuted between code and ....
 //authentification -middleware
 //next() make it move on to the next middleware
-app.use(cors)
+app.use(cors())
 app.use(express.json())
  function getid(){
   fruits.forEach(fruits=> {if(fruits.id>count){ count = fruits.id
