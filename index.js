@@ -48,8 +48,8 @@ app.get('/fruits/:name', (req, res) => {
 //add a new poece of fruit to the date
 app.post('/fruits', (req, res)=>{
   const nfruit = req.body
-  if(nfruit){
-  const matching = fruits.find(fruit=>  fruit.name.toLowerCase() == nfruit.name.toLowerCase())}
+
+  const matching = fruits.find(fruit=>  fruit[name].toLowerCase() == nfruit.name.toLowerCase())
  console.log(`matching ${matching}`)
   if(matching==undefined){
    count++
