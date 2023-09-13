@@ -35,6 +35,7 @@ app.get('/fruits', (req, res)=> {
 //Route to return a specifiic fruit and its info
 //: <property> -> dynamic parameter
 app.get('/fruits/:name', (req, res) => {
+  
   const name = req.params.name.toLowerCase()
  const fruit=fruits.find(fruits => fruits.name.toLowerCase() == name);
   
@@ -47,8 +48,9 @@ app.get('/fruits/:name', (req, res) => {
 //add a new poece of fruit to the date
 app.post('/fruits', (req, res)=>{
   const nfruit = req.body
+  
   const matching = fruits.find(fruit=>  fruit.name.toLowerCase() == nfruit.name.toLowerCase())
-
+ console.log(`matching ${matching}`)
   if(matching==undefined){
    count++
    nfruit.id = count
