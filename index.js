@@ -49,7 +49,8 @@ app.get('/fruits/:name', (req, res) => {
 app.post('/fruits', (req, res)=>{
   const nfruit = req.body
 
-  const matching = fruits.find((fruit) =>  fruit.name.toLowerCase( )== nfruit.name.toLowerCase())
+  const matching = fruits.find((fruit) =>  fruit.name.toLowerCase()== nfruit.name)
+ 
  console.log(`matching ${matching}`)
   if(matching==undefined){
    count++
