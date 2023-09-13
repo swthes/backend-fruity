@@ -49,7 +49,7 @@ app.get('/fruits/:name', (req, res) => {
 app.post('/fruits', (req, res)=>{
   const nfruit = req.body
 
-  const matching = fruits.find(fruit =>  fruit.name.toLowerCase( )== nfruit.name.toLowerCase())
+  const matching = fruits.find((fruit) =>  fruit.name.toLowerCase( )== nfruit.name.toLowerCase())
  console.log(`matching ${matching}`)
   if(matching==undefined){
    count++
@@ -58,7 +58,7 @@ app.post('/fruits', (req, res)=>{
    //
     res.status(201).send(`new fruit ceated ${nfruit.name}`)
   }else{
-    res.status(409).send('fruit already exits')
+    res.status(409).send(`fruit already exits `)
   }
   
   
