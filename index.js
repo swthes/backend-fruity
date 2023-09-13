@@ -49,6 +49,7 @@ app.get('/fruits/:name', (req, res) => {
 app.post('/fruits', (req, res)=>{
   const nfruit = req.body
   const name = nfruit['name']
+  console.log(name);
   const matching = fruits.find((fruit) =>  fruit.name.toLowerCase()== name)
  
  console.log(`matching ${matching}`)
