@@ -48,7 +48,7 @@ app.get('/fruits/:name', (req, res) => {
 //add a new poece of fruit to the date
 app.post('/fruits', (req, res)=>{
   const nfruit = req.body
-  const name = nfruit.name.toString() 
+  const name = nfruit[name]
   const matching = fruits.find((fruit) =>  fruit.name.toLowerCase()== name)
  
  console.log(`matching ${matching}`)
